@@ -43,7 +43,7 @@ char *symbols, unsigned int *res)
 	return (i);
 }
 
-int				ft_read_first_map_line(char *fl_buff, int fd, t_lines *lines)
+int				ft_read_first_map_line(char *fl_buff, int fd)
 {
 	int		i;
 	char	buff[1];
@@ -51,7 +51,6 @@ int				ft_read_first_map_line(char *fl_buff, int fd, t_lines *lines)
 	i = -1;
 	while (read(fd, buff, 1) && buff[0] != '\n')
 		fl_buff[++i] = buff[0];
-	lines = NULL;
 	if (i == -1)
 	{
 		close(fd);
@@ -68,7 +67,7 @@ t_lines			*first_map_line(int fd, char *symbols, unsigned int *res)
 
 	lines = NULL;
 	fl_buff = malloc(sizeof(char) * 10000);
-	i = ft_read_first_map_line(fl_buff, fd, lines);
+	i = ft_read_first_map_line(fl_buff, fd);
 	if (i == -1)
 		return (NULL);
 	lines = malloc(sizeof(t_lines));

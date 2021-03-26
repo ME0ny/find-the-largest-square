@@ -40,7 +40,7 @@ unsigned int	*ft_write_in_line(int arr[2], t_lines *lines, char *symbols,
 unsigned int *res);
 int				ft_run_to_map(t_fline *args, t_lines *lines,
 int fd, unsigned int *res);
-int				ft_read_first_map_line(char *fl_buff, int fd, t_lines *lines);
+int				ft_read_first_map_line(char *fl_buff, int fd);
 t_lines			*first_map_line(int fd, char *symbols, unsigned int *res);
 void			ft_read_from_file(int fd, int size, char *buff);
 void			ft_print_not_zero_map(unsigned int *res, int arr[2],
