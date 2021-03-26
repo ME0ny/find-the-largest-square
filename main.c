@@ -42,7 +42,7 @@ void    ft_new_file(void)
 {
     int     fd;
     char    buf;
-    fd = open("map.txt", O_CREAT | O_RDONLY | O_WRONLY, 0600);
+    fd = open("map.txt", O_CREAT | O_WRONLY, 0600);
     while (read(0, &buf, 1))
         write(fd, &buf, 1);
     write(fd, "\n", 1);

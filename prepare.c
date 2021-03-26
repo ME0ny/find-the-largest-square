@@ -29,7 +29,10 @@ char *symbols, unsigned int *res)
 				ft_arg_to_array(res, 0, i, 1);
 		}
 		else
+		{
+			i = -1;
 			break ;
+		}
 	}
 	free(fl_buff);
 	if (i == -1)
